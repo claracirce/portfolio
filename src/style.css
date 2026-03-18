@@ -1,0 +1,610 @@
+/* =========================
+   CONFIGURAÇÃO GLOBAL
+   ========================= */
+
+
+/* Estilo base da página */
+body{
+
+/* remove margem padrão do navegador */
+margin:0;
+
+/* define a fonte da página */
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+/* fundo com gradiente (de azul escuro para azul roxo) */
+background: linear-gradient(#0a0a2a,#1b1b4b);
+
+/* cor padrão do texto */
+color:white;
+
+/* tamanho padrão da fonte */
+font-size:20px;
+
+/* evita scroll horizontal caso algo ultrapasse a tela */
+overflow-x:hidden;
+
+}
+/* responsividade */
+
+img{  /* isso impede qualquer imagem de quebrar o layout */
+   max-width: 100%;
+   
+}
+
+.sailor-img{
+   text-align: center;
+   
+
+}
+
+
+
+.floating-gif {
+
+position:fixed;      /* fica fixa na tela */
+
+bottom:20px;         /* distância da parte inferior */
+
+right:20px;          /* distância da direita */
+
+width:30px;          /* controla o tamanho do gif */
+
+height:auto;         /* mantém proporção */
+
+animation:float 3s ease-in-out infinite;
+
+z-index:999;
+
+width:40px !important;
+
+}
+
+.sobre-container{
+
+max-width:700px;
+
+margin:40px auto;
+
+text-align:justify;
+
+line-height:1.8;
+
+font-size:18px;
+
+padding:20px;
+
+}
+/* =========================
+   FRASE DE DESTAQUE
+   ========================= */
+
+.tagline{
+
+/* fonte menor */
+font-size:15px;
+
+/* Centraliza */
+text-align:center;
+
+/* cor dourada */
+color:#ffffff;
+
+/* largura máxima para não ficar muito esticado */
+max-width:600px;
+
+/* centraliza o bloco */
+margin:10px auto;
+
+/* deixa o texto em itálico */
+font-style:italic;
+
+}
+
+
+.profile-container{
+  display:flex;
+  justify-content:center;   /* centraliza */
+  margin:40px 0;
+}
+
+.profile-container img{
+
+  width:200px !important;    /* força o tamanho */
+  height:auto;
+
+  border-radius:14px;       /* cantos levemente arredondados */
+ padding:6px;          /* espaço entre foto e fundo */
+
+  background:#f1d63a;   /* moldura dourada */
+
+  box-shadow:0 0 12px rgba(247, 226, 107, 0.5);
+}
+
+
+/* =========================
+   MENU DE NAVEGAÇÃO
+   ========================= */
+
+nav{
+
+/* usa flexbox */
+display:flex;
+
+/* centraliza os itens horizontalmente */
+justify-content:center;
+
+/* espaço entre os links */
+gap:25px;
+
+/* espaço interno do menu */
+padding:18px;
+
+/* fundo transparente com blur (efeito vidro) */
+background:rgba(10,10,40,0.3);
+
+/* efeito glassmorphism */
+backdrop-filter:blur(10px);
+
+/* faz o menu "grudar" no topo ao rolar */
+position:sticky;
+top:0;
+
+/* controla camadas (menu abaixo das estrelas) */
+z-index:1;
+
+}
+
+
+/* =========================
+   LINKS DO MENU
+   ========================= */
+
+nav a{
+
+/* permite usar pseudo-elementos (::after) */
+position:relative;
+
+/* espaço interno */
+padding:12px 22px;
+
+/* remove sublinhado */
+text-decoration:none;
+
+/* cor dourada */
+color:#ffdf2d;
+
+/* deixa texto mais grosso */
+font-weight:bold;
+
+/* cantos arredondados */
+border-radius:20px;
+
+/* fundo transparente */
+background:rgba(255,255,255,0.05);
+
+/* borda */
+border:3px solid #ffdf2d;
+
+/* animações suaves */
+transition:all 0.3s ease;
+
+}
+
+
+/* =========================
+   EFEITO HOVER DO MENU
+   ========================= */
+
+nav a:hover{
+
+/* muda cor de fundo */
+background:#1b1b4b;
+
+/* levanta o botão */
+transform:translateY(-3px) scale(1.05);
+
+/* brilho */
+box-shadow:0 0 12px #ffdf2d;
+
+}
+
+
+
+
+/* =========================
+   HERO (SEÇÃO PRINCIPAL)
+   ========================= */
+
+.hero{
+
+/* centraliza conteúdo */
+text-align:center;
+
+/* espaçamento interno */
+padding:60px 20px;
+
+}
+
+
+/* imagem principal */
+.hero img{
+
+width:100%; /* diminui no celular */
+max-width: 500px; /* tamanho pra pc */
+height: auto;
+
+}
+
+
+/* título principal */
+.hero h1{
+
+font-size:40px;
+
+/* espaço acima */
+margin-top:20px;
+
+}
+
+
+/* =========================
+   PLAYER DE MÚSICA
+   ========================= */
+
+.music-player {
+   display:flex;              /* coloca itens lado a lado */
+align-items:center;        /* alinha verticalmente */
+justify-content:center;    /* centraliza */
+
+gap:10px;                  /* espaço entre elementos */
+
+margin-top:25px;
+
+color:#ffdf2d;
+
+font-size:14px;
+
+}
+
+/* botão play */
+
+#playBtn{
+
+background:#ffdf2d;
+
+border:none;
+
+width:30px;
+height:30px;
+
+
+
+cursor:pointer;
+
+font-size:16px;
+
+color:#131358;
+
+
+transition:0.2s;
+
+}
+
+#playBtn:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 20px #ffdf2d;
+
+}
+
+
+/* =========================
+   SEÇÕES DA PÁGINA
+   ========================= */
+
+section{
+
+/* espaçamento interno */
+padding:80px 20px;
+
+/* largura máxima */
+max-width:900px;
+
+/* centraliza */
+margin:auto;
+
+}
+
+
+/* títulos das seções */
+h2{
+
+text-align:center;
+
+}
+
+
+/* =========================
+   ESTRELAS CAINDO
+   ========================= */
+
+.star{
+
+/* posição fixa na tela */
+position:fixed;
+
+/* começa um pouco acima da tela */
+top:-20px;
+
+/* cor dourada */
+color:#ffdf2d;
+
+/* tamanho da estrela */
+font-size:15px;
+
+/* animação de queda */
+animation:fall linear;
+
+/* estrelas ficam acima da navegação */
+z-index:5;
+
+}
+
+
+/* animação das estrelas */
+@keyframes fall{
+
+to{
+
+/* faz cair até abaixo da tela */
+transform:translateY(110vh);
+
+}
+
+}
+
+.contact-icons{
+
+display:flex;              /* coloca os ícones lado a lado */
+justify-content:center;    /* centraliza */
+gap:30px;                  /* espaço entre os ícones */
+margin-top:30px;
+
+}
+
+.contact-icons a{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:60px;
+height:60px;
+
+border-radius:50%;         /* botão redondo */
+
+background:#ffdf2d;
+
+border:1px solid rgba(255,255,255,0.2);
+
+text-decoration:none;
+color:#ffdf2d;
+
+font-size:24px;
+
+transition:0.3s;
+
+}
+
+
+.contact-icons a:hover{
+
+transform:scale(1.15);
+
+
+
+box-shadow:0 0 15px #ffdf2d; }
+
+/* cor utillizada #393989 */
+
+
+/* controla o tamanho da imagem */
+
+.contact-icons img{
+
+width:40px;
+height:40px; }
+
+/* skills */
+
+.skills{
+   text-align: center;
+   margin-top: 40px;
+}
+
+.skills h2{
+   color:#ffdf2d;
+   margin-bottom: 20px;
+   font-size: 28px;
+}
+
+.skills-icons{
+display: flex;
+justify-content: center;
+gap: 18px;
+flex-wrap: wrap;
+}
+
+/* botão das skills */
+
+.skills-icons a{
+display: flex;
+align-items: center;
+justify-content: center;
+
+width: 70px;
+height: 70px;
+
+border-radius: 50%;
+
+background: #ffdf2d;
+
+border: 1px solid rgba(255,255,255,0.2);
+
+text-decoration: none;
+
+transition: 0.3s;
+}
+
+/* efeito hover */
+
+.skills-icons a:hover{
+
+   transform: scale(1.15);
+
+   background: #ffdf2d;
+
+   box-shadow: 0 0 15px #ffdf2d;
+}
+
+/* tamanho da imagem */
+
+.skills-icons img {
+   width: 50px;
+   height: 50px;
+}
+
+
+/* =========================
+   RESPONSIVO CELULAR
+   ========================= */
+
+   @media (max-width:768px){
+      body {
+         font-size: 16px; /* diminui texto */
+      }
+      /* menu quebra linha */
+
+      nav{
+         flex-wrap: wrap;
+         gap:10px;
+         padding: 12px;
+      }
+
+      nav a {
+         font-size: 14px;
+         padding: 8px 14px;
+      }
+
+      /* imagem principla menor */
+      .hero img{
+         max-width: 200px;
+      }
+
+      /* titulo menor */
+      .hero h1{
+         font-size: 28px;
+      }
+
+      /* texto sobre menor */
+
+      .profile-container {
+         font-size: 16px;
+         padding: 10px;
+      }
+      /* foto perfil menor */
+
+      .profile-container img{
+         width: 150px !important;
+      }
+
+      /* skills menores */
+      .skills-icons a{
+         width: 26px;
+         height: 26px;
+      }
+      /* contato menor */
+
+.contact-icons a{
+width:40px;
+height:40px;
+}
+
+.contact-icons img{
+width:26px;
+height:26px;
+}
+
+/* gif menor no celular */
+
+.floating-gif{
+max-width:25px !important;
+bottom:10px;
+right:10px;
+}
+
+} 
+   
+/* ===============================
+   PROJECTS
+================================ */
+
+#projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+   padding: 0;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+
+
+.project-info {
+  padding: 15px;
+}
+
+.project-info h3 {
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #ff4da6; /* pode ajustar pra sua paleta */
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.project-btn:hover {
+  background: #ff1a8c;
+}
